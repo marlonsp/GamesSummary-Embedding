@@ -2,8 +2,9 @@
 Feito por: Marlon Silva Pereira
 
 ## Introdução
-Este projeto consiste em uma sistema de recomendação de jogos que utiliza a técnica de embeddings para análise de similaridade entre descrições de jogos. O objetivo é oferecer recomendações personalizadas aos usuários com base nas características e temáticas dos jogos, utilizando um conjunto de dados extraído do Metacritic. Além das recomendações, o sistema fornece links diretos para as páginas dos jogos na plataforma, onde os usuários podem acessar críticas e avaliações detalhadas.
+Este projeto consiste em uma sistema de recomendação de jogos que utiliza a técnica de embeddings para análise de similaridade entre descrições de jogos. O objetivo é oferecer recomendações personalizadas aos usuários com base nas características e temáticas dos jogos, utilizando um conjunto de dados extraído do Metacritic. Além das recomendações, o sistema fornece links diretos para as páginas dos jogos na plataforma, onde os usuários podem acessar críticas e avaliações detalhadas. Esta é uma continuação do projeto [GamesSummary](https://github.com/marlonsp/GamesSummary), as orientações para execução das ferramenta, como a raspagem de dados, estão presentes nesse outro repositório.
 
+## Passos percorridos
 1. Descrição do Dataset:
 
 Para este projeto, utilizei um conjunto de dados de descrições de jogos, que foi o mesmo utilizado na APS 1. Esse dataset foi gerado através de scraping da página [Metacritic](https://www.metacritic.com/), contendo informações textuais que descrevem o jogo em termos de sua temática, mecânicas e experiência geral oferecida ao jogador. Esse conjunto de dados é ideal para desenvolver uma busca por similaridade, uma vez que as descrições oferecem contexto suficiente para diferenciar os jogos uns dos outros.
@@ -35,13 +36,11 @@ Gráfico de perda:
 
 As figuras acima mostram os embeddings para as descrições dos jogos projetados em um espaço 2D utilizando TSNE. A primeira imagem exibe os embeddings pré-treinados (sBERT sem ajuste), enquanto a segunda mostra os embeddings após o ajuste com o autoencoder.
 
-5. Discussão sobre os clusters observados em cada figura:
+5. Discussão sobre os clusters observados:
 
 Na comparação das figuras, observa-se pouca diferença entre os embeddings pré-treinados e os ajustados. Ambos mostram uma distribuição difusa, com agrupamentos não muito claros. No entanto, após o ajuste, é possível notar uma leve tendência de maior clusterização, indicando que o autoencoder ajudou a organizar melhor algumas descrições, ainda que de forma sutil.
 
 Essa mudança sugere que o ajuste fino dos embeddings contribuiu para capturar características um pouco mais específicas do conjunto de dados de jogos, mas sem uma separação muito evidente entre os grupos. A visualização colorida com as categorias pode ajudar a identificar melhor a relação entre esses agrupamentos e as diferentes temáticas dos jogos.
-
-6. Testes de busca
 
 ## Casos de Testes:
 
