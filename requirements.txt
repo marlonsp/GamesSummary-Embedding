@@ -2,3 +2,7 @@ pandas
 torch
 sentence-transformers
 scikit-learn
+fastapi
+uvicorn
+plotly
+tqdm
